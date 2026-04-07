@@ -98,7 +98,6 @@ async def transcribe(
             "size_mb": round(size_mb, 2),
             "segments": segments,
         }
-
     except Exception as e:
         logger.error(f"Erro na transcrição: {e}")
         raise HTTPException(500, str(e))
