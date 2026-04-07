@@ -46,14 +46,6 @@ def get_model(model_name: str) -> whisper.Whisper:
         logger.info(f"Modelo {model_name} carregado em {device}")
     return _model_cache[model_name]
 
-
-@app.on_event("startup")
-async def startup_event():
-    """Pré-carrega o modelo padrão na inicialização."""
-    logger.info(f"Iniciando API — pré-carregando modelo: {DEFAULT_MODEL}")
-    get_model(DEFAULT_MODEL)
-
-
 @app.get("/", tags=["Info"])
 def root():
     return {
