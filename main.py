@@ -31,7 +31,7 @@ app.add_middleware(
 SUPPORTED_FORMATS = {".mp3", ".mp4", ".mpeg", ".mpga", ".m4a", ".wav", ".webm", ".ogg", ".flac"}
 MAX_FILE_SIZE_MB = 100
 AVAILABLE_MODELS = ["tiny", "base", "small", "medium", "large"]
-DEFAULT_MODEL = os.getenv("WHISPER_MODEL", "tiny")
+DEFAULT_MODEL = os.getenv("WHISPER_MODEL", "base")
 
 # Cache de modelos carregados
 _model_cache: dict = {}
