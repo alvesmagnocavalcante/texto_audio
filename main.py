@@ -13,7 +13,7 @@ import torch
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="Whisper Transcription API", version="1.0.0")
+app = FastAPI(title="Transcription API", version="1.0.0")
 
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
