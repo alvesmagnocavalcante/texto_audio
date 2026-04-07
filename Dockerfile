@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # 4. Define o modelo como 'tiny' para tentar sobreviver aos 512MB de RAM
-ENV WHISPER_MODEL=tiny
+ENV WHISPER_MODEL=base
 # Porta padrão que o Render espera
 EXPOSE 10000
 
