@@ -10,7 +10,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
-ENV WHISPER_MODEL=small
+ENV WHISPER_MODEL=base
 
 EXPOSE 10000
 
