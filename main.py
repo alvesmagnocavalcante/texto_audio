@@ -20,7 +20,7 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 SUPPORTED_FORMATS = {".mp3", ".mp4", ".mpeg", ".mpga", ".m4a", ".wav", ".webm", ".ogg", ".flac"}
 MAX_FILE_SIZE_MB = 100
 AVAILABLE_MODELS = ["tiny", "base", "small", "medium", "large"]
-DEFAULT_MODEL = os.getenv("WHISPER_MODEL", "base")
+DEFAULT_MODEL = os.getenv("WHISPER_MODEL", "small")
 
 _model_cache: dict = {}
 
