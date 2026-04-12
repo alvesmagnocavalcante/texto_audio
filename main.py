@@ -17,7 +17,7 @@ app = FastAPI(title="Transcription API", version="1.0.0")
 
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
-SUPPORTED_FORMATS = {".mp3", ".mp4", ".mpeg", ".mpga", ".m4a", ".wav", ".webm", ".ogg", ".flac"}
+SUPPORTED_FORMATS = {".mp3", ".mp4", ".mpeg", ".mpga", ".m4a", ".wav", ".webm", ".ogg",".oga" ".flac"}
 MAX_FILE_SIZE_MB = 100
 AVAILABLE_MODELS = ["tiny", "base", "small", "medium", "large"]
 DEFAULT_MODEL = os.getenv("WHISPER_MODEL", "base")
